@@ -167,7 +167,8 @@
 		result = [self do_open:[prefix stringByAppendingString:@"root=Wallpaper"]];
 	} 
 	else if ([key isEqualToString:@"wifi"]) {
-		result = [self do_open:[prefix stringByAppendingString:@"root=WIFI"]];
+		//result = [self do_open:[prefix stringByAppendingString:@"root=WIFI"]];
+		result = [self openURL:[NSURL URLWithString:@"App-Prefs:root=WIFI"]];
 	} 
 	else if ([key isEqualToString:@"touch"]) {
 	    result = [self do_open:[prefix stringByAppendingString:@"root=TOUCHID_PASSCODE"]];
